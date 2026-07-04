@@ -1,16 +1,14 @@
 package com.hotel.reservas.model;
 
 import jakarta.persistence.*;
-import lombok.Data; // <--- Importante: esto genera todo
+import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "reservas")
-@Data // <--- Agrega esta anotación aquí
+@Data
 public class Reserva {
 
     @Id
@@ -19,7 +17,7 @@ public class Reserva {
 
     @ManyToOne
     @JoinColumn(name = "id_cliente")
-    @JsonIgnoreProperties({"reservas"}) // <--- ESTA LÍNEA ROMPE EL BUCLE
+    @JsonIgnoreProperties({"reservas"})
     private Cliente cliente;
 
     @ManyToOne
