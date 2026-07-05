@@ -183,17 +183,18 @@ CREATE TABLE `hoteles` (
   `nombre` varchar(255) NOT NULL,
   `ciudad` varchar(255) NOT NULL,
   `direccion` varchar(255) NOT NULL,
-  `descripcion` varchar(255) DEFAULT NULL
+  `descripcion` varchar(255) DEFAULT NULL,
+  `imagen_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `hoteles`
 --
 
-INSERT INTO `hoteles` (`id_hotel`, `nombre`, `ciudad`, `direccion`, `descripcion`) VALUES
-(1, 'Hotel Andes', 'Cusco', 'Calle Real 456', 'Cerca de la plaza principal'),
-(2, 'Hotel Luna', 'Lima', 'Av. Principal 123', 'Piscina y spa'),
-(3, 'Hotel Sol', 'Ica', 'Jr. Bolívar 789', 'Vistas a la Huacachina');
+INSERT INTO `hoteles` (`id_hotel`, `nombre`, `ciudad`, `direccion`, `descripcion`, `imagen_url`) VALUES
+(1, 'Hotel Andes', 'Cusco', 'Calle Real 456', 'Cerca de la plaza principal', 'assets/sede-andes.jpg'),
+(2, 'Hotel Luna', 'Lima', 'Av. Principal 123', 'Piscina y spa', 'assets/sede-luna.jpg'),
+(3, 'Hotel Sol', 'Ica', 'Jr. Bolívar 789', 'Vistas a la Huacachina', 'assets/sede-sol.jpg');
 
 -- --------------------------------------------------------
 
