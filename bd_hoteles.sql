@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-06-2026 a las 03:33:45
+-- Tiempo de generación: 08-07-2026 a las 03:36:59
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 5.6.38
 
@@ -89,10 +89,15 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `apellido`, `tipo_documento`, `numero_documento`, `telefono`, `correo`) VALUES
-(15, 'julia', 'salas', 'DNI', '08135807', '999444222', 'julia@gmail.com'),
-(16, 'juan', 'aguirre', 'DNI', '70879366', '927990393', 'juandedioscisneros30@gmail.com'),
+(15, 'juliaa', 'salaas', 'DNI', '08135807', '999444223', 'juliasalas@gmail.com'),
+(16, 'juan de dios', 'aguirre', 'DNI', '70879366', '927990393', 'juandedioscisneros30@gmaill.com'),
 (17, 'alfredo', 'malla', 'DNI', '40268488', '999999999', 'alfredo@gmail.com'),
-(18, 'aaronchalon', 'horna', 'DNI', '70879344', '999555333', 'horna@gmail.com');
+(18, 'Corina', 'Montoya', 'DNI', '70879344', '928456234', 'corina@gmail.com'),
+(19, 'Aaron', 'Horna', 'DNI', '60765433', '998882238', 'aaron@gmail.com'),
+(20, 'julio', 'gonka', 'DNI', '50609344', '990292121', 'gonka@gmail.com'),
+(21, 'andrew', 'martinez', 'DNI', '90879355', '928990220', 'andrew@gmail.com'),
+(22, 'juan carlos', 'miguel', 'DNI', '70879911', ' 992439123', 'miguel@gmail.com'),
+(23, 'pepe', 'lucho', 'DNI', '80989434', '999222111', 'pepe@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -191,9 +196,9 @@ CREATE TABLE `hoteles` (
 --
 
 INSERT INTO `hoteles` (`id_hotel`, `nombre`, `ciudad`, `direccion`, `descripcion`) VALUES
-(1, 'Hotel Andes', 'Cusco', 'Calle Real 456', 'Cerca de la plaza principal'),
-(2, 'Hotel Luna', 'Lima', 'Av. Principal 123', 'Piscina y spa'),
-(3, 'Hotel Sol', 'Ica', 'Jr. Bolívar 789', 'Vistas a la Huacachina');
+(1, 'Sede Los Olivos', 'Lima', 'Calle Real 456', 'Cerca de la plaza principal'),
+(2, 'Sede Breña', 'Lima', 'Av. Principal 123', 'Piscina y spa'),
+(3, 'Sede Comas', 'Lima', 'Jr. Bolívar 789', 'Vistas a la Huacachina');
 
 -- --------------------------------------------------------
 
@@ -222,10 +227,12 @@ CREATE TABLE `reservas` (
 --
 
 INSERT INTO `reservas` (`id_reserva`, `id_cliente`, `id_habitacion`, `fecha_entrada`, `fecha_salida`, `num_adultos`, `num_ninos`, `estado`, `precio_total`, `tipo_comprobante`, `ruc_empresa`, `subtotal`, `igv`) VALUES
-(6, 15, 8, '2026-06-28', '2026-06-29', 1, 0, 'CONFIRMADA', NULL, 'BOLETA', '', NULL, NULL),
-(7, 16, 16, '2026-06-28', '2026-06-30', 1, 0, 'CONFIRMADA', NULL, 'BOLETA', NULL, NULL, NULL),
-(8, 17, 2, '2026-06-29', '2026-06-30', 4, 0, 'CONFIRMADA', NULL, 'BOLETA', '', NULL, NULL),
-(9, 18, 5, '2026-06-30', '2026-07-01', 1, 0, 'PENDIENTE', NULL, 'BOLETA', '', NULL, NULL);
+(11, 16, 5, '2026-07-03', '2026-07-04', 1, 0, 'FINALIZADA', NULL, 'BOLETA', '', NULL, NULL),
+(12, 20, 2, '2026-07-03', '2026-07-04', 1, 0, 'FINALIZADA', NULL, 'BOLETA', NULL, NULL, NULL),
+(13, 21, 1, '2026-07-03', '2026-07-04', 1, 0, 'FINALIZADA', NULL, 'BOLETA', NULL, NULL, NULL),
+(14, 18, 3, '2026-07-03', '2026-07-04', 4, 0, 'FINALIZADA', NULL, 'BOLETA', '', NULL, NULL),
+(15, 22, 44, '2026-07-03', '2026-07-04', 1, 0, 'FINALIZADA', NULL, 'BOLETA', '', NULL, NULL),
+(16, 23, 22, '2026-07-04', '2026-07-05', 1, 0, 'FINALIZADA', NULL, 'BOLETA', '', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -293,7 +300,7 @@ ALTER TABLE `chatbot_preguntas`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `habitaciones`
@@ -311,7 +318,7 @@ ALTER TABLE `hoteles`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id_reserva` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_reserva` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas
